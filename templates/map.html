@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobart Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <!-- <h1>Mapping Net Zero - A Community Climate Initiative</h1> -->
+        <img src='c:\Users\danie\OneDrive\Desktop\logo.png'/>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#datasets">Datasets</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#insights">Insights</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for an address or suburb in Hobart">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="map-section">
+            <div id="map" style="width: 90%; height: 600px;"></div>
+        
+            <div id="popup" style="display: none;">
+                <h3>Location Details</h3>
+                <p id="address"></p>
+                <p>Latitude: <span id="latitude"></span></p>
+                <p>Longitude: <span id="longitude"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>
